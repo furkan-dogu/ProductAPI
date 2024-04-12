@@ -21,7 +21,7 @@ app.all("/", (req, res) => {
     })
 })
 
-app.use("/product", require("./src/routes/productRouter"))
+app.use("/products", require("./src/routes/productRouter"))
 
 //! errorHandler
 app.use(require("./src/middlewares/errorHandler"))

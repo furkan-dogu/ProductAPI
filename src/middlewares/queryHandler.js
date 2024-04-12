@@ -25,7 +25,7 @@ module.exports = (req, res, next) => {
         Model,
         populate = null,
     ) {
-        return await Model.find({ ...filter, ...search })
+        return await Model.find({ ...filter, ...searchQuery })
             .sort(sort)
             .skip(skip)
             .limit(limit)
@@ -33,7 +33,7 @@ module.exports = (req, res, next) => {
     }
 
     res.getModelListDetails = async (Model) => {
-        const data = await Model.find({ ...filter, ...search })
+        const data = await Model.find({ ...filter, ...searchQuery })
 
         let details = {
             filter,
