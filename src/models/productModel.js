@@ -29,7 +29,7 @@ const productCategorySchema = new mongoose.Schema(
 //! Product
 const productSchema = new mongoose.Schema(
     {
-        productCategoryId: {
+        category: {
             type: mongoose.Schema.Types.ObjectId,
             ref: "ProductCategory",
             required: true

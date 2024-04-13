@@ -7,11 +7,12 @@ const { ProductCategory, Product } = require("../models/productModel")
 module.exports.ProductCategory = {
 
     list: async (req, res) => {
-        const data = await ProductCategory.find()
-        res.status(200).send({
-            error: false,
-            data
-        })
+        const data = await res.getModelList(ProductCategory);
+        res.status(200).send({ 
+            error: false, 
+            details: await res.getModelListDetails(ProductCategory),
+            data: data 
+        });
     },
 
     create: async (req, res) => {
@@ -50,7 +51,7 @@ module.exports.ProductCategory = {
 module.exports.Product = {
 
     list: async (req, res) => {
-        const data = await res.getModelList(Product, "productCategoryId")
+        const data = await res.getModelList(Product, "category")
         res.status(200).send({
             error: false,
             details: await res.getModelListDetails(Product),
@@ -67,7 +68,7 @@ module.exports.Product = {
     },
 
     read: async (req, res) => {
-        const data = await Product.findOne({ _id: req.params.productId }).populate("productCategoryId")
+        const data = await Product.findOne({ _id: req.params.productId }).populate("category")
         res.status(202).send({
             error: false,
             data
