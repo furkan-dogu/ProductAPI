@@ -1,7 +1,7 @@
 "use strict"
 
 const User = require('./models/userModel')
-const { ProductCategory, Product } = require('./models/productModel')
+// const { ProductCategory, Product } = require('./models/productModel')
 
 module.exports = async () => {
 
