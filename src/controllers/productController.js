@@ -19,7 +19,7 @@ module.exports = {
                 </ul>
             `
         */
-        const data = await res.getModelList(Product, "category")
+        const data = await res.getModelList(Product, "categoryId")
         res.status(200).send({
             error: false,
             details: await res.getModelListDetails(Product),
@@ -35,7 +35,7 @@ module.exports = {
                 in: 'body',
                 required: true,
                 schema: {
-                    "categoryId": "661aee14a06755ee921e79f4",
+                    "category": "661aee14a06755ee921e79f4",
                     "title": "title",
                     "description": "description",
                     "price": 123,
@@ -79,7 +79,7 @@ module.exports = {
                 in: 'body',
                 required: true,
                 schema: {
-                    "categoryId": "661aee14a06755ee921e79f4",
+                    "category": "661aee14a06755ee921e79f4",
                     "title": "title",
                     "description": "description",
                     "price": 123,
