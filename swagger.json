@@ -577,27 +577,6 @@
         }
       }
     },
-    "Category": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "object",
-          "properties": {
-            "type": {
-              "type": "function"
-            },
-            "trim": {
-              "type": "boolean",
-              "example": true
-            },
-            "required": {
-              "type": "boolean",
-              "example": true
-            }
-          }
-        }
-      }
-    },
     "Product": {
       "type": "object",
       "properties": {
@@ -753,6 +732,27 @@
                   "type": "string"
                 }
               }
+            }
+          }
+        }
+      }
+    },
+    "Category": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "function"
+            },
+            "trim": {
+              "type": "boolean",
+              "example": true
+            },
+            "required": {
+              "type": "boolean",
+              "example": true
             }
           }
         }

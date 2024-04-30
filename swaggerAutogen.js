@@ -33,8 +33,8 @@ const document = {
 			},
 		},
 
-		"Category": productModel.ProductCategory.schema.obj,
 		"Product": productModel.Product.schema.obj,
+		"Category": productModel.ProductCategory.schema.obj,
 	}
 };
 
