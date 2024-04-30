@@ -9,6 +9,7 @@ This project is a backend application developed using Express.js and MongoDB. Th
 ## Table of Contents
 
 - [Technologies Used](#technologies-used)
+- [Documentation](#documentation)
 - [Endpoints](#endpoints)
 - [Project Skeleton](#project-skeleton)
 
@@ -24,6 +25,14 @@ This project is a backend application developed using Express.js and MongoDB. Th
 - mongoose
 - express-async-errors
 - cookie-session
+- swagger-ui-express
+- redoc-express
+
+### Documentation
+
+- Swagger UI: [https://productapi-6sri.onrender.com/documents/swagger](https://productapi-6sri.onrender.com/documents/swagger)
+- Redoc: [https://productapi-6sri.onrender.com/documents/redoc](https://productapi-6sri.onrender.com/documents/redoc)
+- JSON Documentation: [https://productapi-6sri.onrender.com/documents/json](https://productapi-6sri.onrender.com/documents/json)
 
 ## Endpoints
 
@@ -81,5 +90,7 @@ Product API (folder)
 ├── .gitignore
 ├── index.js
 ├── package.json
+├── swagger.json
+├── swaggerAutogen.js
 └── README.md
 ```
