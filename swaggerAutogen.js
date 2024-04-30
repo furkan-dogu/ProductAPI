@@ -6,8 +6,6 @@ const HOST = process.env?.HOST || "https://productapi-6sri.onrender.com"
 const swaggerAutogen = require('swagger-autogen')()
 const packageJson = require('./package.json')
 
-const productModel = require("./src/models/productModel")
-
 const document = {
 	info: {
 		version: packageJson.version,
@@ -33,8 +31,8 @@ const document = {
 			},
 		},
 
-		"Product": productModel.Product.schema.obj,
-		"Category": productModel.ProductCategory.schema.obj,
+		"Product": require('./src/models/productModel').schema.obj,
+		"Category": require('./src/models/categoryModel').schema.obj,
 	}
 };
 

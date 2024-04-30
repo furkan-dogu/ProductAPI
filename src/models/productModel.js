@@ -11,27 +11,11 @@ const isValidUrl = (string) => {
     }
 }
 
-//! Product Category
-const productCategorySchema = new mongoose.Schema(
-    {
-        name: {
-            type: String,
-            trim: true,
-            required: true
-        },
-    },
-    {
-        collection: "productCategory",
-        timestamps: true
-    }
-)
-
-//! Product
 const productSchema = new mongoose.Schema(
     {
         category: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "ProductCategory",
+            ref: "Category",
             required: true
         },
 
@@ -92,7 +76,4 @@ const productSchema = new mongoose.Schema(
     }
 )
 
-module.exports = {
-    ProductCategory: mongoose.model("ProductCategory", productCategorySchema),
-    Product: mongoose.model("Product", productSchema)
-}
+module.exports = mongoose.model("Product", productSchema)

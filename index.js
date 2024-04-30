@@ -79,6 +79,7 @@ app.all('/', (req, res) => {
 
 app.use("/user", require("./src/routes/userRouter"))
 app.use("/products", require("./src/routes/productRouter"))
+app.use("/categories", require("./src/routes/categoryRouter"))
 
 //! errorHandler
 app.use(require("./src/middlewares/errorHandler"))

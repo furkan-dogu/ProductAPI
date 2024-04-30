@@ -48,11 +48,11 @@ This project is a backend application developed using Express.js and MongoDB. Th
 
 ### Product Categories
 
-- `GET /products/categories`: Lists all product categories.
-- `POST /products/categories`: Creates a new product category.
-- `GET /products/categories/:categoryId`: Displays a specific product category.
-- `PUT /products/categories/:categoryId`: Updates information of a specific product category.
-- `DELETE /products/categories/:categoryId`: Deletes a specific product category.
+- `GET /categories`: Lists all product categories.
+- `POST /categories`: Creates a new product category.
+- `GET /categories/:categoryId`: Displays a specific product category.
+- `PUT /categories/:categoryId`: Updates information of a specific product category.
+- `DELETE /categories/:categoryId`: Deletes a specific product category.
 
 ### Products
 
@@ -71,6 +71,7 @@ Product API (folder)
 │    ├── configs
 │    │     └── dbConnection.js
 │    ├── controllers
+│    │     ├── categoryController.js     
 │    │     ├── productController.js     
 │    │     └── userController.js
 │    ├── helpers   
@@ -80,9 +81,11 @@ Product API (folder)
 │    │     ├── queryHandler.js   
 │    │     └── userControl.js 
 │    ├── models                
+│    │     ├── categoryModel.js     
 │    │     ├── productModel.js     
 │    │     └── userModel.js
 │    ├── routes                
+│    │     ├── categoryRouter.js     
 │    │     ├── productRouter.js     
 │    │     └── userRouter.js
 │    └── sync.js

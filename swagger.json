@@ -234,167 +234,12 @@
         }
       }
     },
-    "/products/categories": {
-      "get": {
-        "tags": [
-          "Categories"
-        ],
-        "summary": "List Categories",
-        "description": "\r  You can send query with endpoint for search[], sort[], page and limit.\r  <ul> Examples:\r   <li>URL/?<b>search[field1]=value1&search[field2]=value2</b></li>\r   <li>URL/?<b>sort[field1]=1&sort[field2]=-1</b></li>\r   <li>URL/?<b>page=2&limit=1</b></li>\r  </ul>\r  ",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "Categories"
-        ],
-        "summary": "Create Category",
-        "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "type": "string",
-                  "example": "Test Category"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
-          }
-        }
-      }
-    },
-    "/products/categories/{categoryId}": {
-      "get": {
-        "tags": [
-          "Categories"
-        ],
-        "summary": "Get Single Category",
-        "description": "",
-        "parameters": [
-          {
-            "name": "categoryId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "202": {
-            "description": "Accepted"
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Categories"
-        ],
-        "summary": "Update Category",
-        "description": "",
-        "parameters": [
-          {
-            "name": "categoryId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "type": "string",
-                  "example": "Test Category"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "202": {
-            "description": "Accepted"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Categories"
-        ],
-        "summary": "Delete Category",
-        "description": "",
-        "parameters": [
-          {
-            "name": "categoryId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        }
-      },
-      "patch": {
-        "tags": [
-          "Categories"
-        ],
-        "summary": "Update Category",
-        "description": "",
-        "parameters": [
-          {
-            "name": "categoryId",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "type": "string",
-                  "example": "Test Category"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "202": {
-            "description": "Accepted"
-          }
-        }
-      }
-    },
     "/products/": {
       "get": {
         "tags": [
-          "Categories"
+          "Products"
         ],
-        "summary": "List Categories",
+        "summary": "List Products",
         "description": "\r  You can send query with endpoint for search[], sort[], page and limit.\r  <ul> Examples:\r   <li>URL/?<b>search[field1]=value1&search[field2]=value2</b></li>\r   <li>URL/?<b>sort[field1]=1&sort[field2]=-1</b></li>\r   <li>URL/?<b>page=2&limit=1</b></li>\r  </ul>\r  ",
         "responses": {
           "200": {
@@ -404,9 +249,9 @@
       },
       "post": {
         "tags": [
-          "Categories"
+          "Products"
         ],
-        "summary": "Create Category",
+        "summary": "Create Product",
         "description": "",
         "parameters": [
           {
@@ -416,9 +261,52 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": {
+                "categoryId": {
                   "type": "string",
-                  "example": "Test Category"
+                  "example": "661aee14a06755ee921e79f4"
+                },
+                "title": {
+                  "type": "string",
+                  "example": "title"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "description"
+                },
+                "price": {
+                  "type": "number",
+                  "example": 123
+                },
+                "discountPercentage": {
+                  "type": "number",
+                  "example": 12.96
+                },
+                "rating": {
+                  "type": "number",
+                  "example": 1.23
+                },
+                "stock": {
+                  "type": "number",
+                  "example": 50
+                },
+                "brand": {
+                  "type": "string",
+                  "example": "brand"
+                },
+                "thumbnail": {
+                  "type": "string",
+                  "example": "https://www.thumbnail.com/thumbnail.jpg"
+                },
+                "images": {
+                  "type": "array",
+                  "example": [
+                    "https://www.image.com/image.jpg",
+                    "https://www.image.com/image.jpg",
+                    "https://www.image.com/image.jpg"
+                  ],
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -434,13 +322,254 @@
     "/products/{productId}": {
       "get": {
         "tags": [
+          "Products"
+        ],
+        "summary": "Get Single Product",
+        "description": "",
+        "parameters": [
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Products"
+        ],
+        "summary": "Update Product",
+        "description": "",
+        "parameters": [
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "categoryId": {
+                  "type": "string",
+                  "example": "661aee14a06755ee921e79f4"
+                },
+                "title": {
+                  "type": "string",
+                  "example": "title"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "description"
+                },
+                "price": {
+                  "type": "number",
+                  "example": 123
+                },
+                "discountPercentage": {
+                  "type": "number",
+                  "example": 12.96
+                },
+                "rating": {
+                  "type": "number",
+                  "example": 1.23
+                },
+                "stock": {
+                  "type": "number",
+                  "example": 50
+                },
+                "brand": {
+                  "type": "string",
+                  "example": "brand"
+                },
+                "thumbnail": {
+                  "type": "string",
+                  "example": "https://www.thumbnail.com/thumbnail.jpg"
+                },
+                "images": {
+                  "type": "array",
+                  "example": [
+                    "https://www.image.com/image.jpg",
+                    "https://www.image.com/image.jpg",
+                    "https://www.image.com/image.jpg"
+                  ],
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Products"
+        ],
+        "summary": "Delete Product",
+        "description": "",
+        "parameters": [
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Products"
+        ],
+        "summary": "Update Product",
+        "description": "",
+        "parameters": [
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "categoryId": {
+                  "type": "string",
+                  "example": "661aee14a06755ee921e79f4"
+                },
+                "title": {
+                  "type": "string",
+                  "example": "title"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "description"
+                },
+                "price": {
+                  "type": "number",
+                  "example": 123
+                },
+                "discountPercentage": {
+                  "type": "number",
+                  "example": 12.96
+                },
+                "rating": {
+                  "type": "number",
+                  "example": 1.23
+                },
+                "stock": {
+                  "type": "number",
+                  "example": 50
+                },
+                "brand": {
+                  "type": "string",
+                  "example": "brand"
+                },
+                "thumbnail": {
+                  "type": "string",
+                  "example": "https://www.thumbnail.com/thumbnail.jpg"
+                },
+                "images": {
+                  "type": "array",
+                  "example": [
+                    "https://www.image.com/image.jpg",
+                    "https://www.image.com/image.jpg",
+                    "https://www.image.com/image.jpg"
+                  ],
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          }
+        }
+      }
+    },
+    "/categories/categories": {
+      "get": {
+        "tags": [
+          "Categories"
+        ],
+        "summary": "List Categories",
+        "description": "\r  You can send query with endpoint for search[], sort[], page and limit.\r  <ul> Examples:\r   <li>URL/?<b>search[field1]=value1&search[field2]=value2</b></li>\r   <li>URL/?<b>sort[field1]=1&sort[field2]=-1</b></li>\r   <li>URL/?<b>page=2&limit=1</b></li>\r  </ul>\r  ",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Categories"
+        ],
+        "summary": "Create Category",
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "Test Category"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/categories/categories/{categoryId}": {
+      "get": {
+        "tags": [
           "Categories"
         ],
         "summary": "Get Single Category",
         "description": "",
         "parameters": [
           {
-            "name": "productId",
+            "name": "categoryId",
             "in": "path",
             "required": true,
             "type": "string"
@@ -460,7 +589,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "productId",
+            "name": "categoryId",
             "in": "path",
             "required": true,
             "type": "string"
@@ -494,7 +623,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "productId",
+            "name": "categoryId",
             "in": "path",
             "required": true,
             "type": "string"
@@ -517,7 +646,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "productId",
+            "name": "categoryId",
             "in": "path",
             "required": true,
             "type": "string"
@@ -588,7 +717,7 @@
             },
             "ref": {
               "type": "string",
-              "example": "ProductCategory"
+              "example": "Category"
             },
             "required": {
               "type": "boolean",
