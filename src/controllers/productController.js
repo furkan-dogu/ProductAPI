@@ -19,7 +19,7 @@ module.exports = {
                 </ul>
             `
         */
-        const data = await res.getModelList(Product, "categoryId")
+        const data = await res.getModelList(Product, "category")
         res.status(200).send({
             error: false,
             details: await res.getModelListDetails(Product),

@@ -1,12 +1,13 @@
 "use strict"
 
 const User = require('./models/userModel')
-// const { ProductCategory, Product } = require('./models/productModel')
+// const Category = require('./models/categoryModel')
+// const Product = require('./models/productModel')
 
 module.exports = async () => {
 
     await User.deleteMany().then(() => console.log(' - User Deleted All'))
-    // await ProductCategory.deleteMany().then(() => console.log(' - ProductCategory Deleted All'))
+    // await Category.deleteMany().then(() => console.log(' - Category Deleted All'))
     // await Product.deleteMany().then(() => console.log(' - Product Deleted All'))
 
     // Example User:
@@ -42,7 +43,7 @@ module.exports = async () => {
     // ]
 
     // for (let key of categories) {
-    //     await ProductCategory.create({
+    //     await Category.create({
     //         name: key
     //     })
     // }
