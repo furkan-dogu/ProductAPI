@@ -57,6 +57,10 @@ app.all('/', (req, res) => {
                     redoc: 'https://productapi-6sri.onrender.com/documents/redoc',
                     json: 'https://productapi-6sri.onrender.com/documents/json',
                 },
+                endpoints: {
+                    product: 'https://productapi-6sri.onrender.com/products',
+                    categories: 'https://productapi-6sri.onrender.com/categories'
+                },
                 contact: 'furkandogu2018@gmail.com'
             },
         })
@@ -70,6 +74,10 @@ app.all('/', (req, res) => {
                     swagger: 'https://productapi-6sri.onrender.com/documents/swagger',
                     redoc: 'https://productapi-6sri.onrender.com/documents/redoc',
                     json: 'https://productapi-6sri.onrender.com/documents/json',
+                },
+                endpoints: {
+                    product: 'https://productapi-6sri.onrender.com/products',
+                    categories: 'https://productapi-6sri.onrender.com/categories'
                 },
                 contact: 'furkandogu2018@gmail.com'
             },
