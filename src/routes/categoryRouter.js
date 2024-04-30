@@ -3,10 +3,10 @@
 const router = require("express").Router()
 const Category = require("../controllers/categoryController")
 
-router.route("/categories")
+router.route("/")
     .get(Category.list)
     .post(Category.create)
-router.route("/categories/:categoryId")
+router.route("/:categoryId")
     .get(Category.read)
     .put(Category.update)
     .patch(Category.update)
