@@ -518,7 +518,7 @@
         }
       }
     },
-    "/categories/categories": {
+    "/categories/": {
       "get": {
         "tags": [
           "Categories"
@@ -560,7 +560,7 @@
         }
       }
     },
-    "/categories/categories/{categoryId}": {
+    "/categories/{categoryId}": {
       "get": {
         "tags": [
           "Categories"
