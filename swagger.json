@@ -13,7 +13,7 @@
       "name": "ISC"
     }
   },
-  "host": "127.0.0.1",
+  "host": "https://productapi-6sri.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
@@ -261,7 +261,7 @@
             "schema": {
               "type": "object",
               "properties": {
-                "categoryId": {
+                "category": {
                   "type": "string",
                   "example": "661aee14a06755ee921e79f4"
                 },
@@ -360,7 +360,7 @@
             "schema": {
               "type": "object",
               "properties": {
-                "categoryId": {
+                "category": {
                   "type": "string",
                   "example": "661aee14a06755ee921e79f4"
                 },
@@ -460,7 +460,7 @@
             "schema": {
               "type": "object",
               "properties": {
-                "categoryId": {
+                "category": {
                   "type": "string",
                   "example": "661aee14a06755ee921e79f4"
                 },

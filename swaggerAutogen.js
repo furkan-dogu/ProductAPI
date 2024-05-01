@@ -1,7 +1,6 @@
 "use strict"
 
-require("dotenv").config()
-const HOST = process.env?.HOST || "https://productapi-6sri.onrender.com"
+const HOST = "https://productapi-6sri.onrender.com"
 
 const swaggerAutogen = require('swagger-autogen')()
 const packageJson = require('./package.json')
