@@ -15,7 +15,7 @@ This project is a backend application developed using Express.js and MongoDB. Th
 
 ## Live Demo
 
-[Product API](https://productapi-6sri.onrender.com/)
+[Product API](https://product-api-kappa.vercel.app/)
 
 ## Technologies Used
 
@@ -30,9 +30,9 @@ This project is a backend application developed using Express.js and MongoDB. Th
 
 ### Documentation
 
-- Swagger UI: [https://productapi-6sri.onrender.com/documents/swagger](https://productapi-6sri.onrender.com/documents/swagger)
-- Redoc: [https://productapi-6sri.onrender.com/documents/redoc](https://productapi-6sri.onrender.com/documents/redoc)
-- JSON Documentation: [https://productapi-6sri.onrender.com/documents/json](https://productapi-6sri.onrender.com/documents/json)
+- Swagger UI: [https://product-api-kappa.vercel.app/documents/swagger](https://product-api-kappa.vercel.app/documents/swagger)
+- Redoc: [https://product-api-kappa.vercel.app/documents/redoc](https://product-api-kappa.vercel.app/documents/redoc)
+- JSON Documentation: [https://product-api-kappa.vercel.app/documents/json](https://product-api-kappa.vercel.app/documents/json)
 
 ## Endpoints
 

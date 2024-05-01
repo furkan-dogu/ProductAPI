@@ -53,13 +53,13 @@ app.all('/', (req, res) => {
             user: req.user,
             api: {
                 documents: {
-                    swagger: 'https://productapi-6sri.onrender.com/documents/swagger',
-                    redoc: 'https://productapi-6sri.onrender.com/documents/redoc',
-                    json: 'https://productapi-6sri.onrender.com/documents/json',
+                    swagger: 'https://product-api-kappa.vercel.app/documents/swagger',
+                    redoc: 'https://product-api-kappa.vercel.app/documents/redoc',
+                    json: 'https://product-api-kappa.vercel.app/documents/json',
                 },
                 endpoints: {
-                    product: 'https://productapi-6sri.onrender.com/products',
-                    categories: 'https://productapi-6sri.onrender.com/categories'
+                    product: 'https://product-api-kappa.vercel.app/products',
+                    categories: 'https://product-api-kappa.vercel.app/categories'
                 },
                 contact: 'furkandogu2018@gmail.com'
             },
@@ -71,13 +71,13 @@ app.all('/', (req, res) => {
             session: req.session,
             api: {
                 documents: {
-                    swagger: 'https://productapi-6sri.onrender.com/documents/swagger',
-                    redoc: 'https://productapi-6sri.onrender.com/documents/redoc',
-                    json: 'https://productapi-6sri.onrender.com/documents/json',
+                    swagger: 'https://product-api-kappa.vercel.app/documents/swagger',
+                    redoc: 'https://product-api-kappa.vercel.app/documents/redoc',
+                    json: 'https://product-api-kappa.vercel.app/documents/json',
                 },
                 endpoints: {
-                    product: 'https://productapi-6sri.onrender.com/products',
-                    categories: 'https://productapi-6sri.onrender.com/categories'
+                    products: 'https://product-api-kappa.vercel.app/products',
+                    categories: 'https://product-api-kappa.vercel.app/categories'
                 },
                 contact: 'furkandogu2018@gmail.com'
             },

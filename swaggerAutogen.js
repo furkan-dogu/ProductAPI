@@ -1,6 +1,6 @@
 "use strict"
 
-const HOST = "https://productapi-6sri.onrender.com"
+const HOST = "https://product-api-kappa.vercel.app"
 
 const swaggerAutogen = require('swagger-autogen')()
 const packageJson = require('./package.json')

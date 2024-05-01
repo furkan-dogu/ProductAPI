@@ -13,7 +13,7 @@
       "name": "ISC"
     }
   },
-  "host": "https://productapi-6sri.onrender.com",
+  "host": "https://product-api-kappa.vercel.app",
   "basePath": "/",
   "schemes": [
     "https"
